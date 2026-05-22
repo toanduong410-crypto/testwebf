@@ -9,15 +9,34 @@ st.set_page_config(page_title="Facebook", page_icon="📘", layout="centered")
 # Nhúng CSS tùy chỉnh để đổi giao diện thành màu xanh Facebook và bo góc các bài viết
 st.markdown("""
     <style>
-    .stApp { background-color: #f0f2f5; } /* Màu nền xám nhạt của FB */
-    .fb-header { background-color: #1877f2; color: white; padding: 15px; border-radius: 10px; text-align: center; font-weight: bold; margin-bottom: 20px; }
-    .fb-card { background-color: white; padding: 20px; border-radius: 8px; box-shadow: 0 1px 2px rgba(0,0,0,0.2); margin-bottom: 15px; }
-    .fb-author { font-weight: bold; color: #050505; font-size: 16px; }
-    .fb-time { color: #65676b; font-size: 13px; }
-    .fb-content { color: #050505; font-size: 15px; margin-top: 10px; margin-bottom: 10px; }
+    .stApp { background-color: #000000; } 
+    .fb-header { 
+        background-color: #ffffff; 
+        color: #000000; 
+        padding: 15px; 
+        border-radius: 10px; 
+        text-align: center; 
+        font-weight: bold; 
+        margin-bottom: 20px; 
+        border: 2px solid #ffffff;
+    }
+    .fb-card { 
+        background-color: #ffffff; 
+        padding: 20px; 
+        border-radius: 8px; 
+        box-shadow: 0 4px 10px rgba(255,255,255,0.1); 
+        margin-bottom: 15px; 
+        color: #000000;
+    }
+    .fb-author { font-weight: bold; color: #000000; font-size: 16px; }
+    .fb-time { color: #555555; font-size: 13px; }
+    .fb-content { color: #000000; font-size: 15px; margin-top: 10px; margin-bottom: 10px; }
+    h3, label, .stMarkdown p { color: #ffffff !important; }
+    .fb-card h3, .fb-card label, .fb-card p, .fb-card span, .fb-card div { color: #000000 !important; }
     </style>
-    <div class="fb-header"><h1>facebook</h1></div>
-""", unsafe_allow_html=True) # Đã sửa thành unsafe_allow_html
+    
+    <div class="fb-header"><h1>NAH</h1></div>
+""", unsafe_allow_html=True)
 
 # 2. Hàm xử lý dữ liệu (Đọc/Ghi file JSON)
 def load_posts():
